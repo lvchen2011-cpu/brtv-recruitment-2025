@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>北京广播电视台2025校园招聘 - 与你合力生光</title>
+    
+    <!-- 微信浏览器优化 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="北京广播电视台2025校园招聘">
+    <meta property="og:description" content="耕耘春华，秋实梦想。17个优质职位等你来！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="window.location.href">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+            line-height: 1.6;
+            color: #1D2939;
+            background: #F8F9FA;
+            overflow-x: hidden;
+        }
+        
+        .container { max-width: 750px; margin: 0 auto; padding: 0 20px; }
+        
+        /* 英雄区 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #0057B7 0%, #4299FF 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .hero-content { position: relative; z-index: 2; }
+        .hero h1 { font-size: 36px; font-weight: 700; margin-bottom: 16px; letter-spacing: 0.05em; }
+        .hero .subtitle { font-size: 18px; margin-bottom: 8px; opacity: 0.9; }
+        .hero .tagline { font-size: 16px; opacity: 0.8; margin-bottom: 32px; }
+        .hero .highlight { font-size: 20px; font-weight: 600; color: #FFD700; }
+        
+        .scroll-btn {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 30px;
+            padding: 12px 24px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .scroll-btn:hover { background: rgba(255,255,255,0.3); }
+        
+        /* 区块样式 */
+        .section { padding: 60px 0; }
+        .section:nth-child(even) { background: white; }
+        
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 28px; color: #0057B7; margin-bottom: 12px; }
+        .divider { width: 60px; height: 4px; background: linear-gradient(90deg, #0057B7, #4299FF); margin: 0 auto; border-radius: 2px; }
+        
+        /* 统计卡片 */
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+        .stat-card { background: #E6F0F9; padding: 24px; border-radius: 16px; text-align: center; }
+        .stat-number { font-size: 24px; font-weight: 700; color: #0057B7; margin-bottom: 8px; }
+        .stat-label { font-size: 14px; color: #667085; }
+        
+        /* 岗位卡片 */
+        .jobs-grid { display: grid; gap: 16px; }
+        .job-card {
+            background: white; border-radius: 12px; padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .job-card:active { transform: scale(0.98); }
+        
+        .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+        .job-title { font-size: 18px; font-weight: 600; color: #1D2939; }
+        .job-count { background: #E6F0F9; color: #0057B7; padding: 4px 12px; border-radius: 6px; font-size: 12px; }
+        .job-spec { font-size: 14px; color: #667085; margin-bottom: 12px; }
+        .job-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: #F8F9FA; padding: 4px 8px; border-radius: 6px; font-size: 12px; color: #667085; border: 1px solid #D0D5DD; }
+        
+        /* 流程步骤 */
+        .process-step { display: flex; align-items: flex-start; margin-bottom: 24px; }
+        .step-number { width: 40px; height: 40px; background: #E6F0F9; color: #0057B7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; margin-right: 16px; }
+        .step-content { flex: 1; }
+        .step-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+        .step-desc { font-size: 14px; color: #667085; line-height: 1.5; }
+        .deadline { background: #F59E0B; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-top: 8px; display: inline-block; }
+        
+        /* CTA区域 */
+        .cta-section { background: linear-gradient(135deg, #0057B7 0%, #4299FF 100%); color: white; text-align: center; }
+        .cta-section h2 { font-size: 28px; margin-bottom: 16px; }
+        .qr-container { background: white; border-radius: 20px; padding: 40px 20px; margin: 40px auto; max-width: 300px; box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+        .qr-code { width: 160px; height: 160px; background: #f0f0f0; border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 12px; text-align: center; }
+        .qr-instruction { color: #667085; font-size: 14px; margin-bottom: 20px; }
+        
+        .share-btn {
+            width: 100%; padding: 14px; background: #0057B7; color: white; border: none;
+            border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s;
+        }
+        .share-btn:active { background: #00408A; }
+        
+        /* 联系方式 */
+        .contact-list { display: grid; gap: 16px; margin-top: 40px; }
+        .contact-item {
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+            padding: 16px; background: white; border-radius: 12px; text-decoration: none;
+            color: #1D2939; transition: all 0.3s;
+        }
+        .contact-item:active { background: #E6F0F9; color: #0057B7; }
+        .contact-item svg { width: 20px; height: 20px; fill: currentColor; }
+        
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 28px; }
+            .hero .subtitle { font-size: 16px; }
+            .section-title h2 { font-size: 24px; }
+            .container { padding: 0 16px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; align-items: flex-start; }
+            .job-count { margin-top: 8px; }
+        }
+        
+        /* 动画 */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .section { animation: fadeInUp 0.8s ease-out; }
+    </style>
+</head>
+<body>
+    <!-- 英雄区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>北京广播电视台</h1>
+            <div class="subtitle">2025校园招聘</div>
+            <div class="tagline">耕耘春华，秋实梦想</div>
+            <div class="highlight">与你合力生光</div>
+        </div>
+        <a href="#about" class="scroll-btn">滑动查看详情 ↓</a>
+    </section>
+
+    <!-- 公司介绍 -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于BRTV</h2>
+                <div class="divider"></div>
+            </div>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 16px; color: #667085; line-height: 1.8;">
+                    北京广播电视台是北京市政府直属的局级事业单位，业务涵盖节目制作播出、广告运营、版权管理、金融投资、文化旅游、电子商务、医疗健康、教育培训等领域。
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">10套</div>
+                        <div class="stat-label">电视频道</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7套</div>
+                        <div class="stat-label">广播频率</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">89个</div>
+                        <div class="stat-label">固定电视节目</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">123个</div>
+                        <div class="stat-label">广播节目</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 招聘岗位 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>招聘岗位</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">播音主持</h3>
+                        <span class="job-count">1人</span>
+                    </div>
+                    <div class="job-spec">英语广播主持方向</div>
+                    <div class="job-tags">
+                        <span class="tag">播音与主持艺术</span>
+                        <span class="tag">英语</span>
+                        <span class="tag">新闻传播</span>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">采编</h3>
+                        <span class="job-count">2人</span>
+                    </div>
+                    <div class="job-spec">新闻采编方向</div>
+                    <div class="job-tags">
+                        <span class="tag">中文</span>
+                        <span class="tag">新闻学</span>
+                        <span class="tag">广播电视编导</span>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">编导</h3>
+                        <span class="job-count">2人</span>
+                    </div>
+                    <div class="job-spec">节目编导方向</div>
+                    <div class="job-tags">
+                        <span class="tag">新闻传播</span>
+                        <span class="tag">数字媒体艺术</span>
+                        <span class="tag">动画</span>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">融媒体编辑</h3>
+                        <span class="job-count">8人</span>
+                    </div>
+                    <div class="job-spec">多平台内容制作</div>
+                    <div class="job-tags">
+                        <span class="tag">数字媒体艺术</span>
+                        <span class="tag">媒体创意</span>
+                        <span class="tag">中文</span>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">广播电视技术</h3>
+                        <span class="job-count">3人</span>
+                    </div>
+                    <div class="job-spec">技术保障方向</div>
+                    <div class="job-tags">
+                        <span class="tag">计算机科学与技术</span>
+                        <span class="tag">通信工程</span>
+                        <span class="tag">广播电视工程</span>
+                    </div>
+                </div>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3 class="job-title">数据分析管理</h3>
+                        <span class="job-count">1人</span>
+                    </div>
+                    <div class="job-spec">新媒体数据分析</div>
+                    <div class="job-tags">
+                        <span class="tag">网络与新媒体</span>
+                        <span class="tag">新闻传播学</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 招聘流程 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>招聘流程</h2>
+                <div class="divider"></div>
+            </div>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">扫码报名</h3>
+                        <div class="step-desc">扫描下方二维码完成在线报名</div>
+                        <span class="deadline">截止：2025年1月15日 24:00</span>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">资格审查</h3>
+                        <div class="step-desc">筛选优秀候选人参加笔试</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">笔试面试</h3>
+                        <div class="step-desc">通过电话或邮件通知具体时间地点</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">实习考察</h3>
+                        <div class="step-desc">实地实习考察并评估</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 class="step-title">政治审查体检</h3>
+                        <div class="step-desc">政审和体检合格者签约</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 扫码报名 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>立即扫码，加入我们</h2>
+            <p>耕耘春华，秋实梦想 - 与你合力生光</p>
+            
+            <div class="qr-container">
+                <div class="qr-code">
+                    📱<br>微信扫码<br>报名参加<br>北京广播电视台<br>2025校园招聘
+                </div>
+                <div class="qr-instruction">请用微信扫描上方二维码</div>
+                <button class="share-btn" onclick="shareToWeChat()">📤 分享给好友</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-list">
+                <a href="tel:85338572" class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    85338572
+                </a>
+                <a href="tel:85339586" class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    85339586
+                </a>
+                <a href="https://www.brtv.org.cn" class="contact-item" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    www.brtv.org.cn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 滚动到下一区块
+        function scrollToNext() {
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // 微信分享
+        function shareToWeChat() {
+            if (typeof WeixinJSBridge !== 'undefined') {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    title: '北京广播电视台2025校园招聘',
+                    desc: '耕耘春华，秋实梦想。17个优质职位等你来！',
+                    link: window.location.href
+                });
+            } else {
+                // 复制链接到剪贴板
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        alert('链接已复制，请手动分享给好友');
+                    });
+                } else {
+                    prompt('请复制以下链接分享给好友：', window.location.href);
+                }
+            }
+        }
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // 页面加载完成
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('BRTV 2025招聘页面加载完成');
+        });
+    </script>
+</body>
+</html>
